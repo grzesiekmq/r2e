@@ -1,47 +1,27 @@
-import {
-    run,
-    AXIS
-} from '../main';
+import { run, AXIS } from "../main";
 
-import {
-    Camera
-} from '../camera';
+import { Camera } from "../src/camera";
 
+import { loadGltf } from "../src/utils/loadGltf.js";
 
-
-import {
-    loadGltf
-} from '../utils/loadGltf.js';
-
-import {
-    drawScene
-} from '../main';
+import { drawScene } from "../main";
 
 // const gltf = await loadGltf('models/Avocado/glTF/Avocado.gltf');
 
-const gltf = await loadGltf('models/DamagedHelmet//glTF/DamagedHelmet.gltf');
+const gltf = await loadGltf("models/DamagedHelmet//glTF/DamagedHelmet.gltf");
 
+console.log("gltf", gltf);
 
-console.log('gltf', gltf);
-
-const debug = document.querySelector('#debug');
-
+const debug = document.querySelector("#debug");
 
 function debugInfo() {
-
-
-    debug.innerHTML = 'meshes count ' + gltf.meshes.length + '<p></p>';
-    if (gltf.meshes.length > 1) {
-        debug.innerHTML += 'multi mesh'.toUpperCase();
-    }
+  debug.innerHTML = "meshes count " + gltf.meshes.length + "<p></p>";
+  if (gltf.meshes.length > 1) {
+    debug.innerHTML += "multi mesh".toUpperCase();
+  }
 }
 
 debugInfo();
-
-
-
-
-
 
 const camera = new Camera();
 
@@ -50,15 +30,14 @@ camera.set(0, 0, 5);
 run();
 
 function update() {
-    let x = 0;
-    x += 0.01;
+  let x = 0;
+  x += 0.01;
 
-    camera.rotate(x, AXIS.Y);
+  camera.rotate(x, AXIS.Y);
 
-    requestAnimationFrame(update);
+  requestAnimationFrame(update);
 
-    drawScene(gltf);
-
+  drawScene(gltf);
 }
 
 update();
