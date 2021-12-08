@@ -1,0 +1,12 @@
+{
+    "scripts": {
+        "build": "rollup -c"
+    },
+    "dependencies": {
+        "@loaders.gl/core": "^3.0.13",
+        "@loaders.gl/gltf": "^3.0.13",
+        "@rollup/plugin-commonjs": "^21.0.1",
+        "@rollup/plugin-node-resolve": "^13.0.6",
+        "gl-matrix": "^3.4.3"
+    }
+}
