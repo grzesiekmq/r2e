@@ -1,5 +1,5 @@
 import resolve from '@rollup/plugin-node-resolve';
-
+import eslint from '@rollup/plugin-eslint';
 
 export default {
   input: ['./example/app.js'],
@@ -18,7 +18,8 @@ export default {
   resolve({
     browser: true,
     preferBuiltins: false
-}) 
+}),
+eslint() 
 ]
   
 };
