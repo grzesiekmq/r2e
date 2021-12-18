@@ -1,5 +1,6 @@
-# gl3d
-WebGL 3d rendering engine
+# r2e
+racing rendering engine (r2e) in WebGL
+
 
 ## Usage (3 steps)
 1. **clone** this repo or download zip
