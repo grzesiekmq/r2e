@@ -1,0 +1,20 @@
+{
+    "scripts": {
+        "build": "rollup -c",
+        "watch": "rollup -c -w"
+    },
+    "dependencies": {
+        "@loaders.gl/core": "^3.0.13",
+        "@loaders.gl/gltf": "^3.0.13",
+        "@loaders.gl/images": "^3.1.0",
+        "@loaders.gl/obj": "^3.4.14",
+        "@loaders.gl/textures": "^3.1.0",
+        "@rollup/plugin-commonjs": "^21.0.1",
+        "@rollup/plugin-eslint": "^8.0.1",
+        "@rollup/plugin-node-resolve": "^13.0.6",
+        "gl-matrix": "^3.4.3"
+    },
+    "devDependencies": {
+        "eslint": "^8.26.0"
+    }
+}
